@@ -2,7 +2,7 @@
 %define name    perl-%{module}
 %define modprefix Module
 %define version 0.2808
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:           %{name}
 Version:        %{version}
@@ -32,6 +32,10 @@ BuildRequires:  perl(Test::Harness)
 BuildRequires:  perl(Text::Abbrev)
 BuildRequires:  perl(Text::ParseWords)
 Buildrequires:  perl(YAML)
+# (tv) this is a soft dep (require instead of use); w/o it some builds failed with
+# "Module::Build is not configured with C_support":
+Requires: perl-ExtUtils-CBuilder
+
 Buildarch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
