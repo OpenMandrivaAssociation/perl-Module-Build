@@ -37,7 +37,6 @@ Buildrequires:  perl(YAML)
 Requires: perl-ExtUtils-CBuilder
 
 Buildarch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description
 Module::Build is a system for building, testing, and installing Perl modules.
