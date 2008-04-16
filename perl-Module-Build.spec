@@ -1,8 +1,8 @@
 %define module  Module-Build
 %define name    perl-%{module}
 %define modprefix Module
-%define version 0.2808
-%define release %mkrel 3
+%define version 0.2808.01
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
