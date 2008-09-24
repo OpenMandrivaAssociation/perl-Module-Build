@@ -1,8 +1,8 @@
 %define module  Module-Build
 %define name    perl-%{module}
 %define modprefix Module
-%define version 0.2808.01
-%define release %mkrel 2
+%define version 0.2808
+%define release %mkrel 4
 
 Name:           %{name}
 Version:        %{version}
@@ -74,5 +74,3 @@ rm -rf %{buildroot}
 %{_bindir}/config_data
 %{perl_vendorlib}/%{modprefix}
 %{_mandir}/*/*
-
-
