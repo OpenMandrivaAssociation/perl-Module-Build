@@ -1,17 +1,18 @@
 %define module  Module-Build
 %define name    perl-%{module}
 %define modprefix Module
-%define version 0.2808
-%define release %mkrel 4
+%define version 0.30
+%define release %mkrel 1
 
 Name:           %{name}
 Version:        %{version}
 Release:        %{release}
+Epoch:          1
 Summary:        Build and install Perl modules
 License:        GPL or Artistic
 Group:          Development/Perl
 URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.bz2
+Source:         http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
 BuildRequires:  perl-devel
 BuildRequires:  perl(Cwd)
 BuildRequires:  perl(Data::Dumper)
