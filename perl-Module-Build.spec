@@ -1,7 +1,7 @@
 %define module  Module-Build
 %define name    perl-%{module}
 %define modprefix Module
-%define version 0.32
+%define version 0.33
 %define release %mkrel 1
 
 Name:           %{name}
@@ -14,6 +14,7 @@ Group:          Development/Perl
 URL:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
 BuildRequires:  perl-devel
+Buildrequires:  perl(Archive::Tar)
 BuildRequires:  perl(Cwd)
 BuildRequires:  perl(Data::Dumper)
 BuildRequires:  perl(ExtUtils::CBuilder) >= 0.15
