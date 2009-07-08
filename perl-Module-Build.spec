@@ -1,18 +1,16 @@
-%define module  Module-Build
-%define name    perl-%{module}
-%define modprefix Module
-%define version 0.33
-%define release %mkrel 1
+%define upstream_name       Module-Build
+%define upstream_version    0.34
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 Epoch:          1
 Summary:        Build and install Perl modules
 License:        GPL or Artistic
 Group:          Development/Perl
-URL:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/%{modprefix}/%{module}-%{version}.tar.gz
+Summary:    Curses interface for Config::Model
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source:     http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 BuildRequires:  perl-devel
 Buildrequires:  perl(Archive::Tar)
 BuildRequires:  perl(Cwd)
@@ -37,7 +35,6 @@ Buildrequires:  perl(YAML)
 # (tv) this is a soft dep (require instead of use); w/o it some builds failed with
 # "Module::Build is not configured with C_support":
 Suggests: perl-ExtUtils-CBuilder
-
 Buildarch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
@@ -53,7 +50,7 @@ are included with perl 5.6.0, and it works fine on perl 5.005 if you can
 install a few additional modules.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -74,5 +71,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc Changes INSTALL README
 %{_bindir}/config_data
-%{perl_vendorlib}/%{modprefix}
+%{perl_vendorlib}/Module
 %{_mandir}/*/*
