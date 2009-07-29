@@ -1,17 +1,18 @@
-%define upstream_name       Module-Build
-%define upstream_version    0.34
+%define upstream_name    Module-Build
+%define upstream_version 0.34
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
-Epoch:          1
-Summary:        Build and install Perl modules
-License:        GPL or Artistic
-Group:          Development/Perl
+Epoch:      1
+
+Summary:    Build and install Perl modules
+License:    GPL+ or Artistic
+Group:      Development/Perl
 Summary:    Curses interface for Config::Model
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source:     http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
-BuildRequires:  perl-devel
+Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+
 Buildrequires:  perl(Archive::Tar)
 BuildRequires:  perl(Cwd)
 BuildRequires:  perl(Data::Dumper)
@@ -34,9 +35,9 @@ BuildRequires:  perl(Text::ParseWords)
 Buildrequires:  perl(YAML)
 # (tv) this is a soft dep (require instead of use); w/o it some builds failed with
 # "Module::Build is not configured with C_support":
-Suggests: perl-ExtUtils-CBuilder
 Buildarch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+Suggests: perl-ExtUtils-CBuilder
 
 %description
 Module::Build is a system for building, testing, and installing Perl modules.
