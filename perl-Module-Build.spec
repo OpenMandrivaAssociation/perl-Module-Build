@@ -33,6 +33,9 @@ BuildRequires:  perl(Test::Harness)
 BuildRequires:  perl(Text::Abbrev)
 BuildRequires:  perl(Text::ParseWords)
 Buildrequires:  perl(YAML)
+# for %%check
+BuildRequires:  perl-devel
+
 # (tv) this is a soft dep (require instead of use); w/o it some builds failed with
 # "Module::Build is not configured with C_support":
 Buildarch:      noarch
