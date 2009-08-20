@@ -1,9 +1,9 @@
 %define upstream_name    Module-Build
-%define upstream_version 0.34
+%define upstream_version 0.340201
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 Epoch:      1
 
 Summary:    Build and install Perl modules
