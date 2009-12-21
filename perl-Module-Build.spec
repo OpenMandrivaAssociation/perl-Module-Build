@@ -1,5 +1,5 @@
 %define upstream_name    Module-Build
-%define upstream_version 0.35
+%define upstream_version 0.36
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -75,5 +75,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc Changes INSTALL README
 %{_bindir}/config_data
+%{perl_vendorlib}/inc
 %{perl_vendorlib}/Module
 %{_mandir}/*/*
