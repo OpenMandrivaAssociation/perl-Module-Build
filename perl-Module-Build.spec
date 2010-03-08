@@ -2,8 +2,12 @@
 %define upstream_version 0.3603
 
 Name:       perl-%{upstream_name}
+%if %mdkversion > 200900
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+%else
+Version:    %{upstream_version}
+%endif
+Release:    %mkrel 2
 Epoch:      1
 
 Summary:    Build and install Perl modules
