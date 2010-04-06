@@ -1,5 +1,5 @@
 %define upstream_name    Module-Build
-%define upstream_version 0.3605
+%define upstream_version 0.3607
 
 Name:       perl-%{upstream_name}
 %if %mdkversion > 200900
