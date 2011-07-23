@@ -1,5 +1,5 @@
 %define upstream_name    Module-Build
-%define upstream_version 0.3607
+%define upstream_version 0.3800
 
 Name:       perl-%{upstream_name}
 %if %mdkversion > 200900
@@ -7,7 +7,7 @@ Version:    %perl_convert_version %{upstream_version}
 %else
 Version:    %{upstream_version}
 %endif
-Release:    %mkrel 2
+Release:    %mkrel 1
 Epoch:      1
 
 Summary:    Build and install Perl modules
@@ -17,23 +17,29 @@ Summary:    Curses interface for Config::Model
 Url:        http://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
 
-Buildrequires:  perl(Archive::Tar)
+BuildRequires:  perl(Archive::Tar)
+BuildRequires:  perl(CPAN::Meta) >= 2.110.420
 BuildRequires:  perl(Cwd)
 BuildRequires:  perl(Data::Dumper)
-BuildRequires:  perl(ExtUtils::CBuilder) >= 0.15
+BuildRequires:  perl(ExtUtils::CBuilder) >= 0.270
 BuildRequires:  perl(ExtUtils::Install)
 BuildRequires:  perl(ExtUtils::Manifest)
 BuildRequires:  perl(ExtUtils::Mkbootstrap)
-BuildRequires:  perl(ExtUtils::ParseXS)
+BuildRequires:  perl(ExtUtils::ParseXS) >= 2.210
 BuildRequires:  perl(File::Basename)
 BuildRequires:  perl(File::Compare)
 BuildRequires:  perl(File::Copy)
 BuildRequires:  perl(File::Find)
 BuildRequires:  perl(File::Path)
-BuildRequires:  perl(File::Spec) >= 0.82
+BuildRequires:  perl(File::Spec) >= 0.820
+BuildRequires:  perl(File::Temp) >= 0.150
 BuildRequires:  perl(Getopt::Long)
 BuildRequires:  perl(IO::File)
-BuildRequires:  perl(Test::Harness)
+BuildRequires:  perl(Module::Metadata) >= 1.000.002
+BuildRequires:  perl(Parse::CPAN::Meta)
+BuildRequires:  perl(Perl::OSType) >= 1
+BuildRequires:  perl(Test::Harness) >= 3.160
+BuildRequires:  perl(Test::More) >= 0.490
 BuildRequires:  perl(Text::Abbrev)
 BuildRequires:  perl(Text::ParseWords)
 Buildrequires:  perl(YAML)
