@@ -7,7 +7,7 @@ Version:    %perl_convert_version %{upstream_version}
 %else
 Version:    %{upstream_version}
 %endif
-Release:    %mkrel 1
+Release:    %mkrel 2
 Epoch:      1
 
 Summary:    Build and install Perl modules
