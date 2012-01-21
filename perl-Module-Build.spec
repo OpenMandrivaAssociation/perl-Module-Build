@@ -51,8 +51,6 @@ BuildRequires:  perl-devel
 Buildarch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 Suggests: perl-ExtUtils-CBuilder
-# temporary dep due to the perl-5.14 bump
-BuildRequires:  perl-List-MoreUtils >= 0.320.0-4
 
 %description
 Module::Build is a system for building, testing, and installing Perl modules.
