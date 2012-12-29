@@ -5,7 +5,7 @@ Summary:	Build and install Perl modules
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%{perl_convert_version %{modver}}
-Release:	1
+Release:	2
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -64,9 +64,6 @@ perl Build.PL installdirs=vendor
 
 %install
 ./Build install destdir=%{buildroot}
-
-# MD 20121222 conflicting file with perl, easier to remove it here
-rm -f %{buildroot}%{_mandir}/man1/config_data.1*
 
 %check
 ./Build test
