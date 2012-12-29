@@ -72,7 +72,7 @@ rm -f %{buildroot}%{_mandir}/man1/config_data.1*
 ./Build test
 
 %files 
-%doc Changes INSTALL README
+%doc Changes README
 %{_bindir}/config_data
 %{perl_vendorlib}/inc
 %{perl_vendorlib}/Module
