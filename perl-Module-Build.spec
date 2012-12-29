@@ -1,47 +1,47 @@
-%define upstream_name    Module-Build
-%define upstream_version 0.4003
+%define	modname	Module-Build
+%define	modver	0.4003
 
-Summary:    Build and install Perl modules
-Name:       perl-%{upstream_name}
-Epoch:      1
-Version:    %perl_convert_version %{upstream_version}
-Release:    1
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
-Buildarch:      noarch
+Summary:	Build and install Perl modules
+Name:		perl-%{modname}
+Epoch:		1
+Version:	%{perl_convert_version %{modver}}
+Release:	1
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
+Buildarch:	noarch
 
-BuildRequires:  perl(Archive::Tar)
-BuildRequires:  perl(CPAN::Meta) >= 2.110.420
-BuildRequires:  perl(Cwd)
+BuildRequires:	perl(Archive::Tar)
+BuildRequires:	perl(CPAN::Meta) >= 2.110.420
+BuildRequires:	perl(Cwd)
 BuildRequires:  perl(Data::Dumper)
-BuildRequires:  perl(ExtUtils::CBuilder) >= 0.270
-BuildRequires:  perl(ExtUtils::Install)
-BuildRequires:  perl(ExtUtils::Manifest)
-BuildRequires:  perl(ExtUtils::Mkbootstrap)
-BuildRequires:  perl(ExtUtils::ParseXS) >= 2.210
-BuildRequires:  perl(File::Basename)
-BuildRequires:  perl(File::Compare)
-BuildRequires:  perl(File::Copy)
-BuildRequires:  perl(File::Find)
-BuildRequires:  perl(File::Path)
-BuildRequires:  perl(File::Spec) >= 0.820
-BuildRequires:  perl(File::Temp) >= 0.150
-BuildRequires:  perl(Getopt::Long)
-BuildRequires:  perl(IO::File)
-BuildRequires:  perl(Module::Metadata) >= 1.000.002
-BuildRequires:  perl(Parse::CPAN::Meta)
-BuildRequires:  perl(Perl::OSType) >= 1
-BuildRequires:  perl(Test::Harness) >= 3.160
-BuildRequires:  perl(Test::More) >= 0.490
-BuildRequires:  perl(Text::Abbrev)
-BuildRequires:  perl(Text::ParseWords)
-Buildrequires:  perl(YAML)
+BuildRequires:	perl(ExtUtils::CBuilder) >= 0.270
+BuildRequires:	perl(ExtUtils::Install)
+BuildRequires:	perl(ExtUtils::Manifest)
+BuildRequires:	perl(ExtUtils::Mkbootstrap)
+BuildRequires:	perl(ExtUtils::ParseXS) >= 2.210
+BuildRequires:	perl(File::Basename)
+BuildRequires:	perl(File::Compare)
+BuildRequires:	perl(File::Copy)
+BuildRequires:	perl(File::Find)
+BuildRequires:	perl(File::Path)
+BuildRequires:	perl(File::Spec) >= 0.820
+BuildRequires:	perl(File::Temp) >= 0.150
+BuildRequires:	perl(Getopt::Long)
+BuildRequires:	perl(IO::File)
+BuildRequires:	perl(Module::Metadata) >= 1.000.002
+BuildRequires:	perl(Parse::CPAN::Meta)
+BuildRequires:	perl(Perl::OSType) >= 1
+BuildRequires:	perl(Test::Harness) >= 3.160
+BuildRequires:	perl(Test::More) >= 0.490
+BuildRequires:	perl(Text::Abbrev)
+BuildRequires:	perl(Text::ParseWords)
+Buildrequires:	perl(YAML)
 # for %%check
-BuildRequires:  perl-devel
+BuildRequires:	perl-devel
 
-Suggests: perl-ExtUtils-CBuilder
+Suggests:	perl-ExtUtils-CBuilder
 
 %description
 Module::Build is a system for building, testing, and installing Perl modules.
@@ -55,10 +55,10 @@ are included with perl 5.6.0, and it works fine on perl 5.005 if you can
 install a few additional modules.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version} 
+%setup -qn %{modname}-%{modver} 
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 perl Build.PL installdirs=vendor
 ./Build
 
