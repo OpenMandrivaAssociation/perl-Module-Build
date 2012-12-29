@@ -15,7 +15,7 @@ Buildarch:	noarch
 BuildRequires:	perl(Archive::Tar)
 BuildRequires:	perl(CPAN::Meta) >= 2.110.420
 BuildRequires:	perl(Cwd)
-BuildRequires:  perl(Data::Dumper)
+BuildRequires:	perl(Data::Dumper)
 BuildRequires:	perl(ExtUtils::CBuilder) >= 0.270
 BuildRequires:	perl(ExtUtils::Install)
 BuildRequires:	perl(ExtUtils::Manifest)
@@ -77,4 +77,3 @@ rm -f %{buildroot}%{_mandir}/man1/config_data.1*
 %{perl_vendorlib}/inc
 %{perl_vendorlib}/Module
 %{_mandir}/*/*
-
