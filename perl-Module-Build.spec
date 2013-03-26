@@ -1,16 +1,16 @@
-%define	modname	Module-Build
-%define	modver	0.4003
+%define modname Module-Build
+%define modver 0.4003
 
 Summary:	Build and install Perl modules
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%{perl_convert_version %{modver}}
-Release:	2
+Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
-Buildarch:	noarch
+BuildArch:	noarch
 
 BuildRequires:	perl(Archive::Tar)
 BuildRequires:	perl(CPAN::Meta) >= 2.110.420
@@ -37,10 +37,9 @@ BuildRequires:	perl(Test::Harness) >= 3.160
 BuildRequires:	perl(Test::More) >= 0.490
 BuildRequires:	perl(Text::Abbrev)
 BuildRequires:	perl(Text::ParseWords)
-Buildrequires:	perl(YAML)
+BuildRequires:	perl(YAML)
 # for %%check
 BuildRequires:	perl-devel
-
 Suggests:	perl-ExtUtils-CBuilder
 
 %description
