@@ -6,12 +6,11 @@ Name:		perl-%{modname}
 Epoch:		1
 Version:	%{perl_convert_version %{modver}}
 Release:	3
-License:	GPL+ or Artistic
+License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
-
 BuildRequires:	perl(Archive::Tar)
 BuildRequires:	perl(CPAN::Meta) >= 2.110.420
 BuildRequires:	perl(Cwd)
@@ -72,4 +71,6 @@ perl Build.PL installdirs=vendor
 %{_bindir}/config_data
 %{perl_vendorlib}/inc
 %{perl_vendorlib}/Module
-%{_mandir}/*/*
+%{_mandir}/man1/*
+%{_mandir}/man3/*
+
