@@ -1,16 +1,17 @@
 %define modname Module-Build
-%define modver 0.4003
+%define modver 0.4203
 
 Summary:	Build and install Perl modules
 Name:		perl-%{modname}
 Epoch:		1
 Version:	%{perl_convert_version %{modver}}
-Release:	7
-License:	GPLv2+ or Artistic
+Release:	3
+License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
+
 BuildRequires:	perl(Archive::Tar)
 BuildRequires:	perl(CPAN::Meta) >= 2.110.420
 BuildRequires:	perl(Cwd)
@@ -56,7 +57,6 @@ install a few additional modules.
 %setup -qn %{modname}-%{modver} 
 
 %build
-perl Makefile.PL INSTALLDIRS=vendor
 perl Build.PL installdirs=vendor
 ./Build
 
@@ -71,6 +71,4 @@ perl Build.PL installdirs=vendor
 %{_bindir}/config_data
 %{perl_vendorlib}/inc
 %{perl_vendorlib}/Module
-%{_mandir}/man1/*
-%{_mandir}/man3/*
-
+%{_mandir}/*/*
