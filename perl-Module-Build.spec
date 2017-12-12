@@ -69,6 +69,5 @@ perl Build.PL installdirs=vendor
 %files 
 %doc Changes README
 %{_bindir}/config_data
-%{perl_vendorlib}/inc
 %{perl_vendorlib}/Module
 %{_mandir}/*/*
