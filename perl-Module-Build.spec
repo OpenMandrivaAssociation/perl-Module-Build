@@ -3,12 +3,11 @@
 
 Summary:	Build and install Perl modules
 Name:		perl-%{modname}
-Epoch:		1
 Version:	%{perl_convert_version %{modver}}
-Release:	1
+Release:	2
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{modname}
+Url:		http://metacpan.org/pod/Module::Build
 Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 
