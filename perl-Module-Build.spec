@@ -1,10 +1,10 @@
 %define modname Module-Build
-%define modver 0.4224
+%define modver 0.4229
 
 Summary:	Build and install Perl modules
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	4
+Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Module::Build
