@@ -1,5 +1,5 @@
 %define modname Module-Build
-%define modver 0.4229
+%define modver 0.4231
 
 Summary:	Build and install Perl modules
 Name:		perl-%{modname}
@@ -53,7 +53,7 @@ are included with perl 5.6.0, and it works fine on perl 5.005 if you can
 install a few additional modules.
 
 %prep
-%setup -qn %{modname}-%{modver} 
+%autosetup -p1 -n %{modname}-%{modver} 
 
 %build
 perl Build.PL installdirs=vendor
