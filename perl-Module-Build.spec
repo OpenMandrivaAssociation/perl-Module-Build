@@ -1,14 +1,13 @@
 %define modname Module-Build
-%define modver 0.4231
 
 Summary:	Build and install Perl modules
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
+Version:	0.4232
 Release:	1
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Module::Build
-Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 
 BuildRequires:	perl(Archive::Tar)
@@ -53,10 +52,10 @@ are included with perl 5.6.0, and it works fine on perl 5.005 if you can
 install a few additional modules.
 
 %prep
-%autosetup -p1 -n %{modname}-%{modver} 
+%autosetup -p1 -n %{modname}-%{version} 
+perl Build.PL installdirs=vendor
 
 %build
-perl Build.PL installdirs=vendor
 ./Build
 
 %install
