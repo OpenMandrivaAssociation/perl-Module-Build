@@ -3,7 +3,7 @@
 Summary:	Build and install Perl modules
 Name:		perl-%{modname}
 Version:	0.4234
-Release:	2
+Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://metacpan.org/pod/Module::Build
