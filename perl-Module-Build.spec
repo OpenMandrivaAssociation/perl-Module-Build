@@ -6,7 +6,7 @@ Version:	0.4234
 Release:	3
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Module::Build
+Url:		https://metacpan.org/pod/Module::Build
 Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 
