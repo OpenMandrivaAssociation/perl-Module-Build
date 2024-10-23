@@ -31,7 +31,7 @@ BuildRequires:	perl(IO::File)
 BuildRequires:	perl(Module::Metadata) >= 1.000.002
 BuildRequires:	perl(Parse::CPAN::Meta)
 BuildRequires:	perl(Perl::OSType) >= 1
-BuildRequires:	perl(Test::Harness) >= 3.160
+BuildRequires:	perl(Test::Harness)
 BuildRequires:	perl(Test::More) >= 0.490
 BuildRequires:	perl(Text::Abbrev)
 BuildRequires:	perl(Text::ParseWords)
